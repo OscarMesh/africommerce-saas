@@ -7,6 +7,7 @@ const Navbar = styled.div`
   background: gray;
   width: inherit;
   margin: 0 auto;
+  z-index: 99;
   top: 0;
 `;
 export const NavBar = () => {

@@ -4,6 +4,7 @@ import SearchIcon from '@mui/icons-material/Search';
 import FlipCameraAndroidIcon from '@mui/icons-material/FlipCameraAndroid';
 import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
 import ShoppingCartOutlinedIcon from '@mui/icons-material/ShoppingCartOutlined';
+import TextField from '@mui/material/TextField';
 
 const SearchNavbars = styled.div`
   width: 100%;
@@ -20,26 +21,35 @@ const SearchNavbars = styled.div`
 
 const LogoContainer = styled.div`
   display: flex;
+  flex: 1;
   align-items: center;
 `;
 
 const SearchContainer = styled.div`
-justify-content: center;
+  justify-content: center;
   display: flex;
+  flex: 3;
   align-items: center;
 
   .form-group-container {
     display: flex;
     align-items: center;
-    
 
     .form-search input {
       height: 20px;
       padding: 0.73em;
       border: 1px solid #eee;
       width: 50em;
-
+      font-size: 15px;
+      color: gray;
       border-radius: 4px 0 0 4px;
+      outline: none;
+
+      &::placeholder {
+        font-size: inherit;
+        transition: all 300ms ease-in-out;
+        text-transform: capitalize;
+      }
     }
 
     .form-icon-btn {
@@ -55,6 +65,7 @@ justify-content: center;
 const Options = styled.div`
   width: 100%;
   display: flex;
+  flex: 1;
   align-items: center;
   gap: 2em;
 
@@ -64,14 +75,15 @@ const Options = styled.div`
     gap: 0.4em;
   }
 `;
-
+const Logo = styled.img`
+  max-width: 200px;
+`;
 export const SearchNavbar = () => {
   return (
     <SearchNavbars>
       <LogoContainer className="logo">
-        <h1>LOGO</h1>
+        <Logo src="../../assets/logo.png" />
       </LogoContainer>
-
       <SearchContainer>
         <form>
           <div className="form-group-container">
@@ -84,7 +96,6 @@ export const SearchNavbar = () => {
           </div>
         </form>
       </SearchContainer>
-
       <Options className="options">
         <div className="options-list">
           <div>

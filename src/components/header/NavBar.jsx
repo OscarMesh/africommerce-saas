@@ -17,12 +17,6 @@ const Navbar = styled.div`
   border-bottom: 1px solid #dee2e6!important;
   /* .z-1035 : z-index: 1035 !important; */
   margin: 0 auto;
-  font-family: 'Open Sans', sans-serif;
-  font-weight: 400;
-  position: sticky;
-  // &::after, ::before {
-  //   box-sizing: border-box;
-
 `;
 
 export const NavBar = () => {

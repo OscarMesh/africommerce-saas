@@ -19,33 +19,32 @@ const SearchNavbars = styled.div`
 `;
 
 const LogoContainer = styled.div`
- 
   display: flex;
   align-items: center;
 `;
 
 const SearchContainer = styled.div`
- 
+justify-content: center;
   display: flex;
   align-items: center;
-  
 
   .form-group-container {
     display: flex;
     align-items: center;
-
-    .form-search input{
     
+
+    .form-search input {
       height: 20px;
-      padding: .73em;
+      padding: 0.73em;
       border: 1px solid #eee;
-      
+      width: 50em;
+
       border-radius: 4px 0 0 4px;
     }
 
-    .form-icon-btn{
+    .form-icon-btn {
       background-color: red;
-      padding: .5em 1em;
+      padding: 0.5em 1em;
       color: white !important;
       border-radius: 0 4px 4px 0;
       min-height: 20px;
@@ -76,7 +75,7 @@ export const SearchNavbar = () => {
       <SearchContainer>
         <form>
           <div className="form-group-container">
-            <div className="form-search" >
+            <div className="form-search">
               <input placeholder="search for your products" />
             </div>
             <div className="form-icon-btn">

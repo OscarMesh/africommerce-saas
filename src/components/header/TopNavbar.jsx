@@ -19,7 +19,7 @@ const Container1 = styled.div`
   gap: 2em;
   text-align: center;
   list-style: none;
-  margin-bottonm: 10px !important;
+  /* margin-bottom: 10px !important; */
   flex: 1;
 `;
 
@@ -68,7 +68,6 @@ font-size: 13px;
 color: #333;
 opacity: .8;
 font-weight: 400;
-
 `;
 
 const Reg = styled.div`

@@ -6,10 +6,12 @@ const Container = styled.div`
   height: auto;
   margin: 0 auto;
   width: 100%;
+
   display: flex;
   flex-direction: column;
   position: relative;
-  background: rgb(242, 243, 248);
+  background: white;
+  color: #333;
 `;
 const Children = styled.div`
   margin: 0 auto;
@@ -20,8 +22,8 @@ export const Layout = (props) => {
   return (
     <Container>
       <NavBar />
-      <Children>{props.children}</Children>
-      <Footer />
+      {/* <Children>{props.children}</Children>
+      <Footer /> */}
     </Container>
   );
 };

@@ -24,7 +24,7 @@ Here is a quick overview of the `Africommerce` repo setup:
 
 ### 🍴 Fork and Clone the Repo
 
-First, you need to fork the `react-play` repo. You can do this by clicking the `Fork` button on the top right corner of the repo. If you are new to forking, please watch this [YouTube Guide](https://www.youtube.com/) to get started.
+First, you need to fork the `Africommerce` repo. You can do this by clicking the `Fork` button on the top right corner of the repo. If you are new to forking, please watch this [YouTube Guide](https://www.youtube.com/) to get started.
 
 Once forked, you can clone the repo by clicking the `Clone or Download` button on the top right corner of the forked repo.
 

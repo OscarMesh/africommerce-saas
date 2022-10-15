@@ -10,7 +10,6 @@ const ProductsContainer = styled.div`
   background-color: #ffff;
   position: relative;
   padding: 20px;
-
 `;
 
 export const Home = () => {

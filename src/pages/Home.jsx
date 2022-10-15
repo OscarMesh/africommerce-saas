@@ -1,15 +1,26 @@
 import React from 'react';
 import styled from 'styled-components';
 import { HeroSection } from '../components/HeroSection';
-import { Products } from '../components/products/Products';
+import Products from '../components/products/Products';
 import { Ads } from '../components/utils/Ads';
 const Containter = styled.div``;
+const ProductsContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  background-color: #ffff;
+  position: relative;
+  padding: 20px;
+
+`;
+
 export const Home = () => {
   return (
     <Containter>
       <HeroSection />
       <Ads />
-      <Products />
+      <ProductsContainer>
+        <Products />
+      </ProductsContainer>
     </Containter>
   );
 };

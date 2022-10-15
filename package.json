@@ -18,11 +18,9 @@
     "eslint-plugin-node": "^11.1.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-<<<<<<< HEAD
     "react-responsive-carousel": "^3.2.23",
     "react-router-dom": "^6.4.2",
     "react-scripts": "^5.0.1",
-=======
     "react-elastic-carousel": "^0.11.5",
     "react-icons": "^4.6.0",
     "react-material-ui-carousel": "^3.4.2",
@@ -30,7 +28,6 @@
     "react-scripts": "5.0.1",
     "react-slick": "^0.29.0",
     "slick-carousel": "^1.8.1",
->>>>>>> f57c1d224a4b413d5f026d5614c62a8ec6bb3651
     "styled-components": "^5.3.6",
     "web-vitals": "^2.1.4"
   },

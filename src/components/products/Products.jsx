@@ -20,7 +20,6 @@ const Head = styled.div`
     h3 {
       font-size: 24px;
       margin-right: 10px;
-      
     }
     p {
       background: red;
@@ -43,9 +42,7 @@ const Head = styled.div`
     box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.08);
   }
 `;
-const Wrapper = styled.div`
-  width: 100%;
-`;
+
 const Card = styled.div`
   width: 183px;
   position: relative;
@@ -220,54 +217,52 @@ const Products = () => {
 
   return (
     <>
-      <Wrapper>
-        <Head>
-          <span>
-            <h3>Flash Sale</h3>
-            <p>811</p> : <p>11</p> : <p>11</p> : <p>11</p>
-          </span>
-          <button>View More</button>
-        </Head>
-        <div id="slider">
-          <StyledArrowContainerLeft onClick={slideLeft}>
-            <MdKeyboardArrowLeft />
-          </StyledArrowContainerLeft>
-          {data.map((values) => {
-            return (
-              <Card key={values.id}>
-                <Promo>
-                  <h3>OFF</h3>
-                  <p>20%</p>
-                </Promo>
-                <Image>
-                  <img src={values.image} />
-                </Image>
+      <Head>
+        <span>
+          <h3>Flash Sale</h3>
+          <p>811</p> : <p>11</p> : <p>11</p> : <p>11</p>
+        </span>
+        <button>View More</button>
+      </Head>
+      <div id="slider">
+        <StyledArrowContainerLeft onClick={slideLeft}>
+          <MdKeyboardArrowLeft />
+        </StyledArrowContainerLeft>
+        {data.map((values) => {
+          return (
+            <Card key={values.id}>
+              <Promo>
+                <h3>OFF</h3>
+                <p>20%</p>
+              </Promo>
+              <Image>
+                <img src={values.image} />
+              </Image>
 
-                <Price>
-                  <p>$90,000</p>
-                  <p>${values.price}</p>
-                </Price>
-                <Rate>
-                  <Rating
-                    name="half-rating"
-                    defaultValue={2.5}
-                    precision={0.5}
-                    size="small"
-                  />
-                  <p>{values.description}</p>
-                  <Point>
-                    <p>Club Point:</p>
-                    <p>{values.rating.count}</p>
-                  </Point>
-                </Rate>
-              </Card>
-            );
-          })}
-          <StyledArrowContainerRight onClick={slideRight}>
-            <MdKeyboardArrowRight />
-          </StyledArrowContainerRight>
-        </div>
-      </Wrapper>
+              <Price>
+                <p>$90,000</p>
+                <p>${values.price}</p>
+              </Price>
+              <Rate>
+                <Rating
+                  name="half-rating"
+                  defaultValue={2.5}
+                  precision={0.5}
+                  size="small"
+                />
+                <p>{values.description}</p>
+                <Point>
+                  <p>Club Point:</p>
+                  <p>{values.rating.count}</p>
+                </Point>
+              </Rate>
+            </Card>
+          );
+        })}
+        <StyledArrowContainerRight onClick={slideRight}>
+          <MdKeyboardArrowRight />
+        </StyledArrowContainerRight>
+      </div>
     </>
   );
 };

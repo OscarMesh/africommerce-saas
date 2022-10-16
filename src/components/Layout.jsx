@@ -6,6 +6,8 @@ const Container = styled.div`
   height: auto;
   margin: 0 auto;
   width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
   display: flex;
   flex-direction: column;
   position: relative;

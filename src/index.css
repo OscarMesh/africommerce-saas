@@ -4,7 +4,7 @@
   padding: 0;
 }
 
-<<<<<<< HEAD
+
 body {
   background-color: #f2f3f8 !important;
   -webkit-font-smoothing: antialiased !important;
@@ -50,7 +50,7 @@ body {
   --dark: #111723;
   --soft-dark: rgba(42, 50, 66, 0.15);
 } */
-=======
+
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
@@ -76,4 +76,4 @@ code {
     flex-direction: column;
   }
 }
->>>>>>> f57c1d224a4b413d5f026d5614c62a8ec6bb3651
+

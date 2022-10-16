@@ -4,7 +4,7 @@ import SearchIcon from '@mui/icons-material/Search';
 import FlipCameraAndroidIcon from '@mui/icons-material/FlipCameraAndroid';
 import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
 import ShoppingCartOutlinedIcon from '@mui/icons-material/ShoppingCartOutlined';
-import TextField from '@mui/material/TextField';
+
 
 const SearchNavbars = styled.div`
   width: 100%;

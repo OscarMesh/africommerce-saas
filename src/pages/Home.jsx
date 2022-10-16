@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import { AdsSection } from '../components/ads/AdsSection';
 import { HeroSection } from '../components/HeroSection';
 import Products from '../components/products/Products';
-import { Ads } from '../components/utils/Ads';
+
 const Containter = styled.div``;
 const ProductsContainer = styled.div`
   display: flex;
@@ -19,7 +19,8 @@ export const Home = () => {
       <HeroSection />
       <AdsSection />
       <Products />
-      <Ads />
+
+
       <ProductsContainer>
         <Products />
       </ProductsContainer>

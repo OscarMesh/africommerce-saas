@@ -2,7 +2,9 @@ import { Rating } from '@mui/material';
 import React, { useState, useEffect } from 'react';
 import styled from 'styled-components';
 import axios from 'axios';
+
 import { MdKeyboardArrowRight, MdKeyboardArrowLeft } from 'react-icons/md';
+import { Link } from 'react-router-dom';
 
 // styles
 const Head = styled.div`
@@ -27,7 +29,7 @@ const Head = styled.div`
       font-size: 16px;
       padding: 10px;
       border-radius: 5px;
-      text-weight: 600;
+      
     }
   }
   button {
@@ -36,7 +38,7 @@ const Head = styled.div`
     font-size: 16px;
     padding: 10px;
     border-radius: 5px;
-    text-weight: 600;
+    
     border: none;
     cursor: pointer;
     box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.08);
@@ -64,55 +66,46 @@ const Image = styled.div`
   }
 `;
 const Promo = styled.div`
-background: #FFFFFF;
-box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.08);
-border-radius: 0px 15px 15px 0px;
-padding: 5px;
-position: absolute;
-top: 10px;
-left:0;
-display: flex;
-flex-direction: row;
-justify- content: space-between;
-gap: 5px;
-align-items: center;
-z-index: 1;
-h3 {
-  color: red;
-  font-size: 14px;
-  font-weight: 600;
-  
-}
-p {
-  padding 5px;
-  border-radius: 50%;
-  background: red;
-  color: #ffff;
-  font-size: 14px;
-}
-
+  background: #ffffff;
+  box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.08);
+  border-radius: 0px 15px 15px 0px;
+  padding: 5px;
+  position: absolute;
+  top: 10px;
+  left: 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 5px;
+  align-items: center;
+  z-index: 1;
+  h3 {
+    color: red;
+    font-size: 14px;
+    font-weight: 600;
+  }
+  p {
+    padding: 5px;
+    border-radius: 50%;
+    background: red;
+    color: #ffff;
+    font-size: 14px;
+  }
 `;
 const Price = styled.div`
-display: flex;
-flex-direction: row;
-gap: 10px;
-margin-left: 10px;
-p {
-    text-decoration: line-through;  
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  margin-left: 10px;
+  p {
+    text-decoration: line-through;
     color: #99999f;
- &:nth-child(2) {
-    text-decoration: none; 
-    color: red;
-    font-weight: 600;
-}
-`;
-const Text = styled.div`
-  padding: 5px;
-  font-size: 12px;
-  color: #ffff;
-  background: grey;
-  margin-left: -10px;
-  max-width: 63px;
+    &:nth-child(2) {
+      text-decoration: none;
+      color: red;
+      font-weight: 600;
+    }
+  }
 `;
 
 const Rate = styled.div`
@@ -172,21 +165,30 @@ const StyledArrowContainerLeft = styled.div`
   }
 `;
 const Point = styled.div`
-display: flex;
-flex-direction: row;
-justify-content: space-between;
-align-items: center;
-padding: 5px;
-background: #fce0d9;
-border-radius: 5px;
-text-align: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px;
+  background: #fce0d9;
+  border-radius: 5px;
+  text-align: center;
 
-p {
-  &:nth-child(2) {
- font-weight: 600;
-}
+  p {
+    &:nth-child(2) {
+      font-weight: 600;
+    }
+  }
 `;
-
+const Container = styled.div`
+  display: flex;
+  flex-direction: column;
+  background-color: #ffff;
+  position: relative;
+  overflow: hidden;
+  padding: 20px;
+  width: 100%;
+`;
 const Products = () => {
   const [loading, setLoading] = useState();
   const [data, setData] = useState([]);
@@ -195,7 +197,6 @@ const Products = () => {
   const slideLeft = (e) => {
     var slider = document.getElementById('slider');
     slider.scrollLeft = slider.scrollLeft - 500;
-    console.log(e);
   };
   const slideRight = () => {
     var slider = document.getElementById('slider');
@@ -207,16 +208,16 @@ const Products = () => {
       url: 'https://fakestoreapi.com/products?limit=10',
     })
       .then((res) => {
-        console.log(res.data);
         setData(res.data);
       })
       .catch((err) => {
         console.log(err);
       });
-  }, []);
+    return () => {};
+  }, [setData]);
 
   return (
-    <>
+    <Container>
       <Head>
         <span>
           <h3>Flash Sale</h3>
@@ -230,40 +231,45 @@ const Products = () => {
         </StyledArrowContainerLeft>
         {data.map((values) => {
           return (
-            <Card key={values.id}>
-              <Promo>
-                <h3>OFF</h3>
-                <p>20%</p>
-              </Promo>
-              <Image>
-                <img src={values.image} />
-              </Image>
+            <Link
+              to={`/product/${values.id}`}
+              style={{ textDecoration: 'none', color: 'gray' }}
+            >
+              <Card key={values.id}>
+                <Promo>
+                  <h3>OFF</h3>
+                  <p>20%</p>
+                </Promo>
+                <Image>
+                  <img src={values.image} />
+                </Image>
 
-              <Price>
-                <p>$90,000</p>
-                <p>${values.price}</p>
-              </Price>
-              <Rate>
-                <Rating
-                  name="half-rating"
-                  defaultValue={2.5}
-                  precision={0.5}
-                  size="small"
-                />
-                <p>{values.description}</p>
-                <Point>
-                  <p>Club Point:</p>
-                  <p>{values.rating.count}</p>
-                </Point>
-              </Rate>
-            </Card>
+                <Price>
+                  <p>$90,000</p>
+                  <p>${values.price}</p>
+                </Price>
+                <Rate>
+                  <Rating
+                    name="half-rating"
+                    defaultValue={2.5}
+                    precision={0.5}
+                    size="small"
+                  />
+                  <p>{values.description}</p>
+                  <Point>
+                    <p>Club Point:</p>
+                    <p>{values.rating.count}</p>
+                  </Point>
+                </Rate>
+              </Card>
+            </Link>
           );
         })}
         <StyledArrowContainerRight onClick={slideRight}>
           <MdKeyboardArrowRight />
         </StyledArrowContainerRight>
       </div>
-    </>
+    </Container>
   );
 };
 

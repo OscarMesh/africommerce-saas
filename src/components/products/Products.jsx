@@ -29,7 +29,7 @@ const Head = styled.div`
       font-size: 16px;
       padding: 10px;
       border-radius: 5px;
-      text-weight: 600;
+      
     }
   }
   button {
@@ -38,7 +38,7 @@ const Head = styled.div`
     font-size: 16px;
     padding: 10px;
     border-radius: 5px;
-    text-weight: 600;
+    
     border: none;
     cursor: pointer;
     box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.08);
@@ -66,33 +66,31 @@ const Image = styled.div`
   }
 `;
 const Promo = styled.div`
-background: #FFFFFF;
-box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.08);
-border-radius: 0px 15px 15px 0px;
-padding: 5px;
-position: absolute;
-top: 10px;
-left:0;
-display: flex;
-flex-direction: row;
-justify- content: space-between;
-gap: 5px;
-align-items: center;
-z-index: 1;
-h3 {
-  color: red;
-  font-size: 14px;
-  font-weight: 600;
-  
-}
-p {
-  padding 5px;
-  border-radius: 50%;
-  background: red;
-  color: #ffff;
-  font-size: 14px;
-}
-
+  background: #ffffff;
+  box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.08);
+  border-radius: 0px 15px 15px 0px;
+  padding: 5px;
+  position: absolute;
+  top: 10px;
+  left: 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 5px;
+  align-items: center;
+  z-index: 1;
+  h3 {
+    color: red;
+    font-size: 14px;
+    font-weight: 600;
+  }
+  p {
+    padding: 5px;
+    border-radius: 50%;
+    background: red;
+    color: #ffff;
+    font-size: 14px;
+  }
 `;
 const Price = styled.div`
   display: flex;
@@ -108,14 +106,6 @@ const Price = styled.div`
       font-weight: 600;
     }
   }
-`;
-const Text = styled.div`
-  padding: 5px;
-  font-size: 12px;
-  color: #ffff;
-  background: grey;
-  margin-left: -10px;
-  max-width: 63px;
 `;
 
 const Rate = styled.div`

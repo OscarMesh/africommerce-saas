@@ -3,10 +3,6 @@ import styled from 'styled-components';
 import { AdsSection } from '../components/ads/AdsSection';
 import { HeroSection } from '../components/HeroSection';
 import Products from '../components/products/Products';
-<<<<<<< HEAD
-import { Ads } from '../components/utils/Ads';
-=======
->>>>>>> 574b97a (Product Detail)
 
 const Containter = styled.div``;
 const ProductsContainer = styled.div`
@@ -21,12 +17,8 @@ export const Home = () => {
   return (
     <Containter>
       <HeroSection />
-<<<<<<< HEAD
-      <Ads />
-=======
       <AdsSection />
       <Products />
->>>>>>> 574b97a (Product Detail)
       <ProductsContainer>
         <Products />
       </ProductsContainer>

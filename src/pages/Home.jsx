@@ -19,6 +19,8 @@ export const Home = () => {
       <HeroSection />
       <AdsSection />
       <Products />
+
+
       <ProductsContainer>
         <Products />
       </ProductsContainer>
